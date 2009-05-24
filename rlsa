@@ -16,7 +16,7 @@
 ## OR
 ## 2. or figure them out manually
 cd "$TODO_DIR"
-listtodos=`find . -depth 1 -type f | sed 's/\.\///g' | grep -Ev "^\.|\.bak$|\.tmp$|^report|^done"`
+listtodos=`find . -maxdepth 1 -type f | sed 's/\.\///g' | grep -Ev "^\.|\.cfg$|\.bak$|\.tmp$|^report|^done"`
 # ^^ add exceptions up there
 mytodos=($listtodos);
 
