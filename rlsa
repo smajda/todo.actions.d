@@ -8,6 +8,8 @@
 # URL: http://github.com/smajda/todo.actions.d
 
 
+TMP_FILE="$TODO_DIR"/rlsa.tmp
+
 ############# config:
 
 ## 1. list the files you want to show
@@ -47,3 +49,5 @@ do
 done
 
 _list "$TMP_FILE" "$@"
+
+rm $TMP_FILE
